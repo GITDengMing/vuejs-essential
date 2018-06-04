@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import validator from './validator';
 import dropdown from './dropdown'
+// 引入 title.js 的默认值
+import title from './title'
 
 const directives = {
     validator,
+    title,
     dropdown
 }
 for (const [key,value] of Object.entries(directives)) {

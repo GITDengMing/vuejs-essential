@@ -42,14 +42,13 @@ function getPopover() {
 export default {
     bind(el, binding, vnode) {
       const events = ['mouseenter', 'mouseleave', 'click'];
-      const handler = (event) => {
-        if (event.type === 'mouseenter') {
-          showTitle(el, binding.value);
-        } else {
-          showTitle();
-        }
-      };
-  
+      const handler = (event) =>  {
+                                    if (event.type === 'mouseenter') {
+                                      showTitle(el, binding.value);
+                                    } else {
+                                      showTitle();
+                                    }
+                                  }
       events.forEach((event) => {
         el.addEventListener(event, handler, false);
       });
