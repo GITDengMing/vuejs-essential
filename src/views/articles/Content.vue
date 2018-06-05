@@ -32,7 +32,7 @@
             </div>
             <div class="voted-users">
               <div class="user-lists">
-                <span v-for="likeUser in likeUsers">
+                <span v-for="likeUser in likeUsers" :key="likeUser.uid">
                   <!-- 点赞用户是当前用户时，加上类 animated 和 swing 以显示一个特别的动画  -->
                   <router-link :to="`/${likeUser.uname}`" :src="likeUser.uavatar" tag="img" class="img-thumbnail avatar avatar-middle" :class="{ 'animated swing' : likeUser.uid === 1 }"></router-link> 
                 </span>
